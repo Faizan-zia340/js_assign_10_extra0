@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Task 0
+        var n = 6;
+        for (let i = 0; i <= n; i++) {
+            for (let j = 0; j < i; j++) {
+                document.write("&nbsp;" + "*");
+            }
+            document.write("<br>");
+
+        }
+        document.write("<b><hr></b>");
+        // Task 1
+        for (let i = n; i > 0; i--) {
+            for (let j = 0; j < i; j++) {
+                document.write("&nbsp;" + "*");
+            }
+            document.write("</br>");
+        }
+        document.write("<b><hr></b>");
+        // Task 2
+        var m = 6; // Reassigned n to m
+        for (let i = 0; i <= m; i++) {
+            for (let j = 0; j < i; j++) {
+                document.write("&nbsp;" + i);
+            }
+            document.write("</br>");
+        }
+        document.write("<b><hr></b>");
+        // Task 3
+        for (let i = m; i > 0; i--) {
+            for (let j = 1; j < i; j++) {
+                document.write("&nbsp; &nbsp;");
+            }
+            for (let k = 1; k <= (m + 1) - i; k++) {
+                document.write("&nbsp;" + k);
+            }
+            document.write("</br>");
+        }
+        document.write("<b><hr></b>");
+        // Task 4
+        var alpha = 65;
+        for (let i = 0; i <= m; i++) {
+            for (let j = 0; j < i; j++) {
+                document.write("&nbsp;" + String.fromCharCode(alpha));
+                alpha++;
+            }
+            alpha = 65;
+            document.write("</br>");
+        }
+        document.write("<b><hr></b>");
+        // Task 5
+        for (let i = 0; i <= m; i++) {
+            for (let j = m + 1; j > i; j--) {
+                document.write("&nbsp; &nbsp;");
+            }
+            for (let k = 1; k <= i; k++) {
+                document.write("&nbsp;*");
+            }
+            for (let l = 1; l < i; l++) {
+                document.write("&nbsp;*");
+            }
+            document.write("</br>");
+        }
+        document.write("<b><hr></b>");
+        // Task 6
+        for (let i = 0; i <= m; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write("&nbsp; &nbsp;");
+            }
+            for (let k = m - i; k >= 1; k--) {
+                document.write("&nbsp;&nbsp;*");
+            }
+            for (let l = m - i; l > 1; l--) {
+                document.write("&nbsp;*");
+            }
+            document.write("</br>");
+        }
+        document.write("<b><hr></b>");
+
+        // Task 7
+        for (let i = 0; i <= m; i++) {
+            for (let j = m + 1; j > i; j--) {
+                document.write("&nbsp; &nbsp;");
+            }
+            for (let k = 1; k <= i; k++) {
+                document.write("&nbsp;" + i);
+            }
+            for (let l = 1; l < i; l++) {
+                document.write("&nbsp;" + i);
+            }
+            document.write("</br>");
+        }
+        document.write("<b><hr></b>");
+        // Task 8
+        var beta = 65; // Changed variable name to avoid redeclaration error
+        for (let i = 0; i <= m; i++) {
+            for (let k = 0; k < i; k++) {
+                document.write("&nbsp; ");
+            }
+            for (let j = m - i; j >= 1; j--) {
+                document.write("&nbsp;&nbsp;" + String.fromCharCode(beta++));
+            }
+            document.write("</br>");
+            beta = 65;
+        }
+        document.write("<b><hr></b>");
+        //task 9
+        function printZPattern(height) {
+    for (let i = 0; i < height; i++) {
+        for (let j = 0; j < height; j++) {
+            if (i === 0 || i === height -1) {
+                document.write("* ");
+            } else if (i + j === height - 1) {
+                document.write("* ");
+            } else {
+                document.write("&nbsp;&nbsp;"); 
+            }
+        }
+        document.write("<br>");
+    }
+}
+printZPattern(4);
+document.write("<b><hr></b>");
+    </script>
+</body>
+</html>
